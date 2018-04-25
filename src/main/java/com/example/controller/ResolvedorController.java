@@ -73,6 +73,8 @@ public class ResolvedorController {
         calendar = Calendar.getInstance();
         arrResolvedores = new ArrayList<>();
 
+        oSRepository.deleteAll();
+        
         //Adiciona os resolvedores cadastrados no arrayList 
         resolvedorRepository.findAll().forEach(arrResolvedores::add);
         
